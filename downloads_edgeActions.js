@@ -23,6 +23,20 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${_RectangleCopy}", "click", function(sym, e) {
+         // insert code for mouse click here
+         
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute)
+         
+         // Navigate to a new URL in a new window
+         // (replace "_blank" with appropriate target attribute)
+         window.open("index.html", "_blank");
+         
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 
