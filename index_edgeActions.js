@@ -107,6 +107,16 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       });
       //Edge binding end
 
+      Symbol.bindElementAction(compId, symbolName, "${_AppButton}", "click", function(sym, e) {
+         // insert code for mouse click here
+         // Navigate to a new URL in the current window
+         // (replace "_self" with appropriate target attribute)
+         window.open("about.html", "_self");
+         
+
+      });
+      //Edge binding end
+
    })("stage");
    //Edge symbol end:'stage'
 

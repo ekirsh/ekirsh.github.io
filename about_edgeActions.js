@@ -13,17 +13,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    (function(symbolName) {
       
       
-      Symbol.bindElementAction(compId, symbolName, "${_Rectangle}", "click", function(sym, e) {
-         // insert code for mouse click here
-         
-         // Navigate to a new URL in the current window
-         // (replace "_self" with appropriate target attribute)
-         window.open("http://www.mediafire.com/download/w8b0rwnmli2jjbq/Aqua.zip", "_self");
-
-      });
-      //Edge binding end
-
    })("stage");
    //Edge symbol end:'stage'
 
-})(jQuery, AdobeEdge, "EDGE-16384241");
+})(jQuery, AdobeEdge, "EDGE-2106699");
