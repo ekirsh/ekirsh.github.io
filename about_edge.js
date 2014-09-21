@@ -38,7 +38,7 @@ var symbols = {
                 id: 'Text2',
                 type: 'text',
                 rect: ['242px', '400','auto','auto','auto', 'auto'],
-                text: "I make apps, games, websites and pretty much anything else that involves technology<br>or anyting electronic. This website is not complete yet and more content will get posted up <br>as we go along. If you have any questions about the website or what I do, please send me an<br>email at kirshapps@gmail.com, and I will try to reply as quickly as possible",
+                text: "I make apps, games, websites and pretty much anything else that involves technology<br>or anything electronic. This website is not complete yet and more content will get posted up <br>as we go along. If you have any questions about the website or what I do, please send me an<br>email at kirshapps@gmail.com, and I will try to reply as quickly as possible.",
                 align: "center",
                 font: ['allan, sans-serif', 25, "rgba(255,255,255,1)", "400", "none", "normal"]
             },
