@@ -160,8 +160,8 @@ var symbols = {
     states: {
         "Base State": {
             "${_DesignText}": [
-                ["style", "top", '448px'],
                 ["color", "color", 'rgba(255,255,255,1.00)'],
+                ["style", "top", '448px'],
                 ["style", "left", '468px'],
                 ["style", "font-size", '20px']
             ],
@@ -174,71 +174,67 @@ var symbols = {
                 ["style", "left", '73px'],
                 ["style", "width", '1134px'],
                 ["style", "top", '380px'],
-                ["style", "font-size", '23px'],
+                ["style", "font-family", 'allan, sans-serif'],
                 ["transform", "skewX", '0deg'],
                 ["style", "font-style", 'normal'],
                 ["subproperty", "textShadow.color", 'rgba(9,86,93,0.65)'],
                 ["style", "text-decoration", 'none'],
-                ["style", "font-family", 'allan, sans-serif']
+                ["style", "font-size", '23px']
             ],
             "${_OtherText}": [
-                ["color", "color", 'rgba(255,255,255,1.00)'],
                 ["style", "top", '448px'],
+                ["color", "color", 'rgba(255,255,255,1.00)'],
                 ["style", "left", '774px'],
                 ["style", "font-size", '20px']
             ],
             "${_airplane}": [
                 ["style", "height", '68px'],
-                ["style", "width", '65px'],
+                ["transform", "rotateZ", '-247deg'],
                 ["motion", "location", '1231.40625px 171.3037310625px'],
-                ["transform", "rotateZ", '-247deg']
+                ["style", "width", '65px']
             ],
             "${_OtherButton}": [
                 ["style", "top", '427px'],
-                ["subproperty", "boxShadow.blur", '0px'],
+                ["color", "background-color", 'rgba(0,0,0,1.00)'],
                 ["subproperty", "boxShadow.color", 'rgba(0,0,0,0.65098)'],
-                ["style", "left", '755px'],
-                ["subproperty", "boxShadow.offsetV", '0px'],
-                ["subproperty", "filter.blur", '14px'],
                 ["subproperty", "boxShadow.offsetH", '0px'],
-                ["color", "background-color", 'rgba(0,0,0,1.00)']
+                ["subproperty", "filter.blur", '14px'],
+                ["subproperty", "boxShadow.offsetV", '0px'],
+                ["style", "left", '755px'],
+                ["subproperty", "boxShadow.blur", '0px']
             ],
             "${_NameTextCopy}": [
                 ["style", "top", '0px'],
-                ["style", "width", '198px'],
+                ["style", "font-size", '50px'],
                 ["style", "height", '42px'],
                 ["style", "font-family", 'allan, sans-serif'],
                 ["style", "left", '543px'],
-                ["style", "font-size", '50px']
+                ["style", "width", '198px']
             ],
             "${_Rectangle}": [
                 ["style", "top", '59px'],
+                ["color", "background-color", 'rgba(255,255,255,1.00)'],
                 ["style", "left", '30px'],
-                ["transform", "scaleY", '1.61068'],
-                ["color", "background-color", 'rgba(255,255,255,1.00)']
+                ["transform", "scaleY", '1.61068']
             ],
             "${_AppButton}": [
                 ["style", "top", '427px'],
-                ["subproperty", "boxShadow.blur", '0px'],
+                ["color", "background-color", 'rgba(14,13,13,1.00)'],
                 ["subproperty", "boxShadow.color", 'rgba(0,0,0,0.65098)'],
-                ["style", "left", '554px'],
-                ["subproperty", "boxShadow.offsetV", '0px'],
-                ["subproperty", "filter.blur", '14px'],
                 ["subproperty", "boxShadow.offsetH", '0px'],
-                ["color", "background-color", 'rgba(14,13,13,1.00)']
+                ["subproperty", "filter.blur", '14px'],
+                ["subproperty", "boxShadow.offsetV", '0px'],
+                ["style", "left", '554px'],
+                ["subproperty", "boxShadow.blur", '0px']
             ],
             "${_SocialText}": [
-                ["style", "top", '448px'],
                 ["color", "color", 'rgba(255,255,255,1.00)'],
+                ["style", "top", '448px'],
                 ["style", "left", '671px'],
                 ["style", "font-size", '20px']
             ],
-            "${_AppText}": [
-                ["style", "top", '448px'],
-                ["color", "color", 'rgba(255,255,255,1.00)'],
-                ["subproperty", "filter.blur", '0px'],
-                ["style", "left", '570px'],
-                ["style", "font-size", '20px']
+            "${_Group}": [
+                ["transform", "rotateZ", '-47deg']
             ],
             "${_Text6}": [
                 ["color", "color", 'rgba(255,255,255,1.00)'],
@@ -247,15 +243,15 @@ var symbols = {
             ],
             "${_DesignButton}": [
                 ["color", "background-color", 'rgba(0,0,0,1.00)'],
-                ["subproperty", "boxShadow.color", 'rgba(0,0,0,0.65098)'],
+                ["subproperty", "boxShadow.blur", '0px'],
                 ["style", "border-style", 'dotted'],
                 ["style", "left", '457px'],
                 ["style", "top", '427px'],
-                ["subproperty", "boxShadow.blur", '0px'],
-                ["subproperty", "boxShadow.offsetV", '0px'],
+                ["style", "border-width", '1px'],
                 ["subproperty", "filter.blur", '14px'],
+                ["subproperty", "boxShadow.offsetV", '0px'],
                 ["subproperty", "boxShadow.offsetH", '0px'],
-                ["style", "border-width", '1px']
+                ["subproperty", "boxShadow.color", 'rgba(0,0,0,0.65098)']
             ],
             "${_NameText}": [
                 ["subproperty", "textShadow.blur", '3px'],
@@ -269,41 +265,45 @@ var symbols = {
                 ["style", "text-align", 'center'],
                 ["style", "height", '42px'],
                 ["style", "font-family", 'allan, sans-serif'],
-                ["subproperty", "textShadow.color", 'rgba(11,83,97,0.78)'],
-                ["style", "font-size", '50px']
-            ],
-            "${_SocialButton}": [
-                ["color", "background-color", 'rgba(6,6,6,1.00)'],
-                ["subproperty", "boxShadow.blur", '0px'],
-                ["style", "left", '655px'],
-                ["subproperty", "filter.saturate", '0'],
-                ["style", "top", '427px'],
-                ["subproperty", "boxShadow.color", 'rgba(0,0,0,0.65098)'],
-                ["subproperty", "filter.blur", '14px'],
-                ["subproperty", "boxShadow.offsetH", '0px'],
-                ["subproperty", "boxShadow.offsetV", '0px']
-            ],
-            "${_Stage}": [
-                ["color", "background-color", 'rgba(60,140,152,0.79)'],
-                ["style", "width", '1280px'],
-                ["style", "height", '800px'],
-                ["style", "overflow", 'hidden']
-            ],
-            "${_NameTextCopy2}": [
-                ["style", "top", '0px'],
                 ["style", "font-size", '50px'],
-                ["style", "height", '42px'],
-                ["style", "font-family", 'allan, sans-serif'],
-                ["style", "left", '543px'],
-                ["style", "width", '198px']
+                ["subproperty", "textShadow.color", 'rgba(11,83,97,0.78)']
             ],
             "${_Ellipse}": [
                 ["style", "top", '310px'],
                 ["style", "left", '0px'],
                 ["color", "background-color", 'rgba(6,0,0,1.00)']
             ],
-            "${_Group}": [
-                ["transform", "rotateZ", '-47deg']
+            "${_Stage}": [
+                ["color", "background-color", 'rgba(60,140,152,0.79)'],
+                ["style", "overflow", 'hidden'],
+                ["style", "height", '800px'],
+                ["style", "width", '1280px']
+            ],
+            "${_AppText}": [
+                ["style", "top", '448px'],
+                ["color", "color", 'rgba(255,255,255,1.00)'],
+                ["subproperty", "filter.blur", '0px'],
+                ["style", "left", '570px'],
+                ["style", "font-size", '20px']
+            ],
+            "${_NameTextCopy2}": [
+                ["style", "top", '0px'],
+                ["style", "width", '198px'],
+                ["style", "height", '42px'],
+                ["style", "font-family", 'allan, sans-serif'],
+                ["style", "left", '543px'],
+                ["style", "font-size", '50px']
+            ],
+            "${_SocialButton}": [
+                ["color", "background-color", 'rgba(6,6,6,1.00)'],
+                ["subproperty", "boxShadow.color", 'rgba(0,0,0,0.65098)'],
+                ["style", "left", '655px'],
+                ["subproperty", "filter.saturate", '0'],
+                ["style", "top", '427px'],
+                ["subproperty", "boxShadow.offsetV", '0px'],
+                ["subproperty", "filter.blur", '14px'],
+                ["subproperty", "boxShadow.offsetH", '0px'],
+                ["subproperty", "boxShadow.blur", '0px']
             ]
         }
     },
@@ -327,15 +327,15 @@ var symbols = {
                 { id: "eid72", tween: [ "motion", "${_airplane}", [[378.33, 249.05, 0, 0],[-52.18, 199.88, 0, 0]]], position: 2250, duration: 308 },
                 { id: "eid56", tween: [ "subproperty", "${_Text3}", "textShadow.blur", '5px', { fromValue: '5px'}], position: 702, duration: 0, easing: "easeOutCirc" },
                 { id: "eid52", tween: [ "transform", "${_Text3}", "rotateZ", '6deg', { fromValue: '6deg'}], position: 702, duration: 0, easing: "easeOutCirc" },
-                { id: "eid55", tween: [ "subproperty", "${_Text3}", "textShadow.offsetV", '5px', { fromValue: '5px'}], position: 702, duration: 0, easing: "easeOutCirc" },
-                { id: "eid57", tween: [ "subproperty", "${_Text3}", "textShadow.color", 'rgba(9,86,93,0.65)', { fromValue: 'rgba(9,86,93,0.65)'}], position: 702, duration: 0, easing: "easeOutCirc" },
-                { id: "eid43", tween: [ "style", "${_Text3}", "top", '380px', { fromValue: '380px'}], position: 702, duration: 0, easing: "easeOutCirc" },
-                { id: "eid54", tween: [ "subproperty", "${_Text3}", "textShadow.offsetH", '5px', { fromValue: '5px'}], position: 702, duration: 0, easing: "easeOutCirc" },
-                { id: "eid51", tween: [ "transform", "${_Text3}", "skewX", '0deg', { fromValue: '0deg'}], position: 702, duration: 0, easing: "easeOutCirc" },
                 { id: "eid69", tween: [ "transform", "${_airplane}", "rotateZ", '-219deg', { fromValue: '-247deg'}], position: 0, duration: 702 },
                 { id: "eid70", tween: [ "transform", "${_airplane}", "rotateZ", '-190deg', { fromValue: '-219deg'}], position: 702, duration: 153 },
                 { id: "eid73", tween: [ "transform", "${_airplane}", "rotateZ", '-200deg', { fromValue: '-190deg'}], position: 855, duration: 138 },
-                { id: "eid71", tween: [ "transform", "${_airplane}", "rotateZ", '-177deg', { fromValue: '-200deg'}], position: 993, duration: 257 }            ]
+                { id: "eid71", tween: [ "transform", "${_airplane}", "rotateZ", '-177deg', { fromValue: '-200deg'}], position: 993, duration: 257 },
+                { id: "eid55", tween: [ "subproperty", "${_Text3}", "textShadow.offsetV", '5px', { fromValue: '5px'}], position: 702, duration: 0, easing: "easeOutCirc" },
+                { id: "eid43", tween: [ "style", "${_Text3}", "top", '380px', { fromValue: '380px'}], position: 702, duration: 0, easing: "easeOutCirc" },
+                { id: "eid54", tween: [ "subproperty", "${_Text3}", "textShadow.offsetH", '5px', { fromValue: '5px'}], position: 702, duration: 0, easing: "easeOutCirc" },
+                { id: "eid51", tween: [ "transform", "${_Text3}", "skewX", '0deg', { fromValue: '0deg'}], position: 702, duration: 0, easing: "easeOutCirc" },
+                { id: "eid57", tween: [ "subproperty", "${_Text3}", "textShadow.color", 'rgba(9,86,93,0.65)', { fromValue: 'rgba(9,86,93,0.65)'}], position: 702, duration: 0, easing: "easeOutCirc" }            ]
         }
     }
 }
