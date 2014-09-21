@@ -84,13 +84,11 @@ var symbols = {
         },
     states: {
         "Base State": {
-            "${_Text2Copy}": [
-                ["style", "top", '579px'],
-                ["style", "left", '452px']
-            ],
-            "${_RectangleCopy}": [
-                ["style", "left", '408px'],
-                ["style", "top", '571px']
+            "${_screen}": [
+                ["style", "height", '142px'],
+                ["style", "top", '487px'],
+                ["style", "left", '645px'],
+                ["style", "width", '227px']
             ],
             "${_Text}": [
                 ["style", "top", '267px'],
@@ -98,15 +96,19 @@ var symbols = {
                 ["style", "left", '537px'],
                 ["style", "font-size", '40px']
             ],
-            "${_Text3}": [
-                ["style", "left", '588px'],
-                ["style", "top", '415px']
+            "${_Text2Copy}": [
+                ["style", "top", '579px'],
+                ["style", "left", '452px']
             ],
             "${_Stage}": [
                 ["color", "background-color", 'rgba(60,140,152,0.79)'],
-                ["style", "width", '1280px'],
+                ["style", "overflow", 'hidden'],
                 ["style", "height", '800px'],
-                ["style", "overflow", 'hidden']
+                ["style", "width", '1280px']
+            ],
+            "${_Text3}": [
+                ["style", "left", '588px'],
+                ["style", "top", '415px']
             ],
             "${_Rectangle}": [
                 ["style", "left", '408px'],
@@ -116,11 +118,9 @@ var symbols = {
                 ["style", "top", '495px'],
                 ["style", "left", '437px']
             ],
-            "${_screen}": [
-                ["style", "top", '487px'],
-                ["style", "height", '142px'],
-                ["style", "left", '645px'],
-                ["style", "width", '227px']
+            "${_RectangleCopy}": [
+                ["style", "left", '408px'],
+                ["style", "top", '571px']
             ]
         }
     },
