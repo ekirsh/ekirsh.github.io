@@ -83,7 +83,7 @@ var symbols = {
                 id: 'Text3',
                 type: 'text',
                 rect: ['-494px', '375px','auto','auto','auto', 'auto'],
-                text: "App Developer",
+                text: "Developer",
                 align: "center",
                 font: ['allan, sans-serif', 20, "rgba(3,3,3,1.00)", "400", "none", "normal"],
                 textShadow: ["rgba(0,0,0,0.65098)", 3, 3, 3]
