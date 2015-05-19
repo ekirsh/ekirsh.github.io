@@ -25,11 +25,6 @@ $(document).ready(function() {
     
     document.getElementById('more-more-more-more-info-about-you').innerHTML = "Your browser is " + platform.name;
     
-    if (document.referrer != "" || document.referrer != " ") {
-        document.getElementById('more-more-more-more-more-info-about-you').innerHTML = "You came here from " + document.referrer;
-    }
-    else {
-    }
     
 
     
