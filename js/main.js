@@ -21,6 +21,18 @@ $(document).ready(function() {
     document.getElementById('intro-info').innerHTML = "Since you have been on this page, " + dataCollected.toFixed(1) + " terabytes of data have been collected by the <b>NSA</b>. This is equal to over " + movies + " HD movies.The <b>NSA</b> says it needs this data to prevent another <b>9/11</b>, but how helpful has it really been. They take data right from <b>Google, Apple</b> and <b>Facebook</b>. They even monitor emails and phone calls.";
     }, 1000);
     
+   document.getElementById('more-more-more-info-about-you').innerHTML = "Your operating system is " + platform.os;
+    
+    document.getElementById('more-more-more-more-info-about-you').innerHTML = "Your browser is " + platform.name;
+    
+    if (document.referrer != "" || document.referrer != " ") {
+        document.getElementById('more-more-more-more-more-info-about-you').innerHTML = "You came here from " + document.referrer;
+    }
+    else {
+    }
+    
+
+    
     
 
 });
