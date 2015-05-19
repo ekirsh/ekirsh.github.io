@@ -1,4 +1,5 @@
 var dataCollected = 0.0;
+var movies = 0;
 
 $(document).ready(function() {
 
@@ -16,7 +17,8 @@ $(document).ready(function() {
     
     window.setInterval(function(){
     dataCollected = dataCollected + 0.4;
-    document.getElementById('intro-info').innerHTML = "Since you have been on this page, " + dataCollected.toFixed(1) + " terabytes of data have been collected by the <b>NSA</b>. The <b>NSA</b> says it needs this data to prevent another <b>9/11</b>, but how helpful has it really been. They take data right from <b>Google, Apple</b> and <b>Facebook</b>. They even monitor emails and phone calls.";
+    movies = movies + 100;
+    document.getElementById('intro-info').innerHTML = "Since you have been on this page, " + dataCollected.toFixed(1) + " terabytes of data have been collected by the <b>NSA</b>. This is equal to over " + movies + " HD movies.The <b>NSA</b> says it needs this data to prevent another <b>9/11</b>, but how helpful has it really been. They take data right from <b>Google, Apple</b> and <b>Facebook</b>. They even monitor emails and phone calls.";
     }, 1000);
     
     
