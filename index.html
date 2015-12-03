@@ -1,178 +1,135 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>X Assignment - Ezra Kirsh</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+<head>
+<script src="jquery-latest.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
+<style>
+@font-face {
+   font-family: "Angry";
+   src: url(angrybirds-regular.ttf);
+}
+body {
+   background-image: url(background.jpg); 
+   background-size: 1280px 720px;
+}
+#title {
+    text-align: center;
+    font-family: "Angry";
+    color: white;
+     text-shadow: 0 1px 0 #ccc,
+               0 1px 0 #c9c9c9,
+               0 1.5px 0 #bbb,
+               0 2px 0 #b9b9b9,
+               0 2.5px 0 #aaa,
+               0 3px 0.5px rgba(0,0,0,.1),
+               0 0 2.5px rgba(0,0,0,.1),
+               0 0.5px 1.5px rgba(0,0,0,.3),
+               0 1.5px 2.5px rgba(0,0,0,.2),
+               0 2.5px 5px rgba(0,0,0,.25),
+               0 5px 5px rgba(0,0,0,.2),
+               0 10px 10px rgba(0,0,0,.15);
+    margin-top: 50px;
+    font-size: 50px;
+}
+#credits {
+    text-align: center;
+    font-family: "Angry";
+    color: white;
+    text-shadow: 0 1px 0 #ccc,
+               0 1px 0 #c9c9c9,
+               0 1.5px 0 #bbb,
+               0 2px 0 #b9b9b9,
+               0 2.5px 0 #aaa,
+               0 3px 0.5px rgba(0,0,0,.1),
+               0 0 2.5px rgba(0,0,0,.1),
+               0 0.5px 1.5px rgba(0,0,0,.3),
+               0 1.5px 2.5px rgba(0,0,0,.2),
+               0 2.5px 5px rgba(0,0,0,.25),
+               0 5px 5px rgba(0,0,0,.2),
+               0 10px 10px rgba(0,0,0,.15);
+    margin-top: -20px;
+    font-size: 30px;
+}
+a {
+	position: relative;
+    color: rgba(255,255,255,1);
+    text-decoration: none;
+    background-color: rgba(219,87,5,1);
+    font-family: 'Angry';
+    font-weight: 700;
+    font-size: 3em;
+    display: block;
+    padding: 4px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
+    margin: 100px auto;
+	width: 160px;
+	text-align: center;
+	
+	-webkit-transition: all .1s ease;
+	-moz-transition: all .1s ease;
+	-ms-transition: all .1s ease;
+	-o-transition: all .1s ease;
+	transition: all .1s ease;
+}
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Franz Ferdinand</a></h1>
-					<p>His assasination lit the fuse<br />
-				     for World War 1</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">Intro</a></li>
-						<li><a href="#two">5W's + H</a></li>
-						<li><a href="#three">PERMS</a></li>
-						<li><a href="#four">How did it affect Canada?</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://github.com/kirshapps" class="icon fa-github"><span class="label">Github</span></a></li>
-						<li><a href="mailto:ezra.kirsh@greenwoodcollege.com" class="icon fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								<div class="container">
-									<header class="major">
-										<h2>My "X" Assignment</h2>
-										<p>The Assasination of Franz Ferdinand.</p>
-									</header>
-									<p>On June 28, 1914. Franz Ferdinand, the heir to the throne of Austria Hungary, was killed by 19-year-old Gavrillo Princip. Princip was being backed by the Serbian terrorist group, The Black Hand. This assanination caused many political reprucussions.</p>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>5W's + H</h3>
-									<p>Here's the who, what, where, when, why and how of this historical event.</p>
-									<ul class="feature-icons">
-										<li class="fa-user">Franz Ferdinand</li>
-										<li class="fa-hand-lizard-o">Assasinated by Gavrillo Princip</li>
-										<li class="fa-globe">Bosnian capital of Sarajevo</li>
-										<li class="fa-clock-o">June 28, 1914</li>
-										<li class="fa-question">Nationalism</li>
-										<li class="fa-header">Driver turned to where assasin was waiting</li>
-									</ul>
-								</div>
-							</section>
-
-				
-                        
-                        <section id="three">
-								<div class="container">
-									<h3>PERMS</h3>
-
-									
-										<header>
-											<h4><u>Military</u></h4>
-											<p>The military aspects of my "X"</p>
-										</header>
-										<p>The archdukes assasination caused many military issues in Europe. Here's an ordered list of what happened.</p>
-                                     <ol>
-                                                <li>Austria wants war against Serbia</li>
-                                                <li>Germany agrees to back Austria in this war</li>
-                                                <li>Austria sends Serbia an ultimatum</li>
-                                                <li>Serbia can't concede to all of the demands</li>
-                                                <li>Russia prepares to defend their allie, Serbia</li>
-                                                <li>Germany declares war on Russia</li>
-                                                <li>Germany declares war on France</li>
-                                                <li>Britain sends Germany an ultimatum</li>
-                                                <li>Britain declares war on Germany</li>
-                                                </ol>
-                                    
-                                    <p>The following alliances were formed:</p>
-                                    <table>
-                                    <tr>
-                                    <th><u><b>Triple Alliance</b></u></th>   
-                                    <th><u><b>Triple Entente</b></u></th>
-                                    </tr>
-                                    <tr>
-                                    <td>Germany</td>  
-                                    <td>Britain</td>
-                                    </tr>
-                                    <tr>
-                                    <td>Austria-Hungary</td>  
-                                    <td>Russia</td>
-                                    </tr>
-                                    <tr>
-                                    <td>Italy</td>  
-                                    <td>France</td>
-                                    </tr>
-                                    </table>
-                                                <p>All this happened, just because of an assasination that led to an argument between two countries. As more countries began to get involved, this one historical event began to have a huge effect. This war was a major part of the 20th century, which helped define the world we live in today.</p>
-										<header>
-											<h4><u>Social</u></h4>
-											<p>The social aspects of my "X"</p>
-										</header>
-                                    <p>In 1914, Austria Hungary was a world power. But there was problem, Nationalism. Many different races lived within the Austria-Hungary empire, so there would be a major problem if nationalism caught on. Out of all of the Austrian empire, "The Balkans" were the most nationalistic, especially Serbia. Most serbians lived Bosnia.</p>
-										<p>Bosnia-Herzegovina was the most recent addition to the dual monarchy of Austria-Hungary. When it was annexed in 1908, it helped radicalize Serbian nationlist groups including the 'Black Hand'. They radicalised three recruits from cafes in Belgrade. </p>
-                                    <p>In this situation, I think that it was nationalism that really started the conflict. Of course the main causes for WW1 were Nationalism, Imperialism and Militarism, but nationalism was what really started the conflict. Also, I think that the Austrians were imperialists, and they had so many colonies in their control that they lost their power.</p>
-										
-
-					</div>
-                            </section>
-
-
-						
-						<section id="four">
-								<div class="container">
-									<h3>Canada</h3>
-
-									
-										<header>
-											<h4>How did it affect Canada?</h4>
-											<p>Why is my topic important in understanding WW1 in Canada?</p>
-										</header>
-										<p>I think that The Assasination of Franz Ferdinand is a must know to understand Canada's position in WW1. Since Canada is a Britsh colony, it was Britain that Canada joined the war for, not because they were allies with Serbia. If Canada wasn't a British colony, they probably wouldn't have had any involvment in the war.</p>
-                                    <p>Canada also began to get some recognition in this war and began to develop their independance as a country. If this hadn't happened, Canada might be a lot more closely associated with Britain than it is currently.</p>
-
-					</div>
-                        </section>
-                            
-                        <section id="five">
-								<div class="container">
-                                    <header>
-                                    <h3>Interview with Prof. Margaret MacMillan</h3>
-                                    <p>MacMillan talks about the Assasination of Franz Ferdinand and how it caused WW1</p>
-                                    </header>
-									<iframe src="http://www.cbc.ca/i/caffeine/syndicate/?mediaId=2469042299" width="620" height="348" frameborder="0" allowfullscreen></iframe>
-</div>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Ezra Kirsh. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li><a href="citations.html">Citations</a></li>
-							</ul>
-						</div>
-					</section>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+a:active {
+    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
+    position: relative;
+    top: 6px;
+}
+</style>
+</head>
+<body>
+<h1 id="title">Angry Birds</h1>
+<h3 id="credits">by Christian and Ezra</h3>
+<a href="javascript:startGame()">Start</a>
+<div id="chart"></div>
+</body>
+<script>
+ var showBird = function (color) {
+    console.log("f");
+    if (color === "blue") {
+        alert("blue");
+    }
+    else if (color === "red") {
+        alert("red");
+    }
+    else if (color === "yellow") {
+        alert("yellow");
+    }
+    else {
+        alert("unknown");
+    }
+}   
+  
+window.onload = function() {
+    if (annyang) {
+        var commands = {
+            'show me (the) *color (bird)': showBird,
+            'hello': function() {
+                console.log("Hello");
+            }
+        };
+        
+        annyang.debug();
+        annyang.addCommands(commands);
+    }
+    else {
+        alert("Please use Google Chrome or another browser");
+    }
+}
+ 
+function startGame() {
+    $("#title").fadeOut();
+    $("#credits").fadeOut();
+    $("a").fadeOut();
+    annyang.start();
+}
+</script>
 </html>
