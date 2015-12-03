@@ -2,6 +2,7 @@
 <head>
 <script src="jquery-latest.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
+<script src="https://raw.githubusercontent.com/r3s/jquery-quadratic-plot/master/js/jquery-quadratic-plot.js"></script>
 <style>
 @font-face {
    font-family: "Angry";
@@ -110,51 +111,41 @@ a:active {
  var showBird = function (color) {
     if (color === "blue") {
        $("#img").attr('src', "blue.png");
-       $("#img").fadeIn();
-       setTimeout(2000);
-       $("#img").fadeOut();
-       
        $("#equation").html("y = -0.12(x - 14)2 + 12");
-       $("#distance").html("20");
+       $("#distance").html("Distance: 20");
        $("#axis").html("x=14");
-       $("#roots").html("4 and 24");
-       $("#height").html("12");
+       $("#roots").html("Roots: 4 and 24");
+       $("#height").html("Max Height: 12");
+       $("#myCanvas").quadraticPlot({coeff:{a:-0.12,b:3.36,c:-35.52}});
     }
     else if (color === "red") {
         $("#img").attr('src', "red.png");
-        $("#img").fadeIn();
-        setTimeout(2000);
-        $("#img").fadeOut();
-        
        $("#equation").html("y=-0.5(x - 16)2 + 18");
-       $("#distance").html("12");
+       $("#distance").html("Distance: 12");
        $("#axis").html("x=16");
-       $("#roots").html("10 and 22");
-       $("#height").html("18");
+       $("#roots").html("Roots: 10 and 22");
+       $("#height").html("Max Height: 18");
+       $("#myCanvas").quadraticPlot({coeff:{a:-0.5,b:16,c:-110}});
     }
     else if (color === "yellow") {
-        $("#img").attr('src', "yellow.png"); 
-        $("#img").fadeIn();
-        setTimeout(2000);
-        $("#img").fadeOut();
+        $("#img").attr('src', "yellow.png");
         
        $("#equation").html("y=-(x-18)2+36");
-       $("#distance").html("12");
+       $("#distance").html("Distance: 12");
        $("#axis").html("x=12");
-       $("#roots").html("12 and 24");
-       $("#height").html("36");
+       $("#roots").html("Roots: 12 and 24");
+       $("#height").html("Max Height: 36");
+       $("#myCanvas").quadraticPlot({coeff:{a:-1,b:36,c:-288}});
     }
     else if (color === "black") {
-        $("#img").attr('src', "black.png"); 
-        $("#img").fadeIn();
-        setTimeout(2000);
-        $("#img").fadeOut();
+       $("#img").attr('src', "black.png"); 
         
        $("#equation").html("y=-0.99(x-10)2+20");
-       $("#distance").html("9");
+       $("#distance").html("Distance: 9");
        $("#axis").html("x=10");
-       $("#roots").html("5.5 and 14.5");
-       $("#height").html("20");
+       $("#roots").html("Roots: 5.5 and 14.5");
+       $("#height").html("Max Height: 20");
+       $("#myCanvas").quadraticPlot({coeff:{a:-0.99,b:19.8,c:-199}});
     }
     else {
         
@@ -197,6 +188,7 @@ function startGame() {
 <h3 id="axis"></h3>
 <h3 id="roots"></h3>
 <h3 id="height"></h3>
+<canvas id="myCanvas" width="500" height="500"></canvas>
 </center>
 </body>
 
