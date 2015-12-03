@@ -33,7 +33,7 @@ body {
     margin-top: 50px;
     font-size: 50px;
 }
-#credits {
+h3 {
     text-align: center;
     font-family: "Angry";
     color: white;
@@ -95,24 +95,48 @@ a:active {
        $("#img").fadeIn();
        setTimeout(2000);
        $("#img").fadeOut();
+       
+       $("#equation").innerHTML = "y = -0.12(x - 14)2 + 12";
+       $("#distance").innerHTML = "20";
+       $("#axis").innerHTML = "x=14";
+       $("#roots").innerHTML = "4 and 24";
+       $("#height").innerHTML = "12";
     }
     else if (color === "red") {
         $("#img").attr('src', "red.png");
         $("#img").fadeIn();
         setTimeout(2000);
         $("#img").fadeOut();
+        
+       $("#equation").innerHTML = "y=-0.5(x - 16)2 + 18";
+       $("#distance").innerHTML = "12";
+       $("#axis").innerHTML = "x=16";
+       $("#roots").innerHTML = "10 and 22";
+       $("#height").innerHTML = "18";
     }
     else if (color === "yellow") {
         $("#img").attr('src', "yellow.png"); 
         $("#img").fadeIn();
         setTimeout(2000);
         $("#img").fadeOut();
+        
+        $("#equation").innerHTML = "y=-(x-18)2+36";
+       $("#distance").innerHTML = "12";
+       $("#axis").innerHTML = "x=12";
+       $("#roots").innerHTML = "12 and 24";
+       $("#height").innerHTML = "36";
     }
     else if (color === "black") {
         $("#img").attr('src', "black.png"); 
         $("#img").fadeIn();
         setTimeout(2000);
         $("#img").fadeOut();
+        
+        $("#equation").innerHTML = "y=-0.99(x-10)2+20";
+       $("#distance").innerHTML = "9";
+       $("#axis").innerHTML = "x=10";
+       $("#roots").innerHTML = "5.5 and 14.5";
+       $("#height").innerHTML = "20";
     }
     else {
         
@@ -146,9 +170,16 @@ function startGame() {
 </head>
 <body>
 <h1 id="title">Angry Birds</h1>
-<h3 id="credits">by Christian and Ezra</h3>
+<h3>by Christian and Ezra</h3>
 <a href="javascript:startGame()">Start</a>
-<img id="img" width="500" height="500" src="" style="display:none; align:middle;">
+<center>
+<img id="img" width="250" height="250" src="" style="display:none; align:middle;">
+<h3 id="equation"></h3>
+<h3 id="distance"></h3>
+<h3 id="axis"></h3>
+<h3 id="roots"></h3>
+<h3 id="height"></h3>
+</center>
 </body>
 
 </html>
