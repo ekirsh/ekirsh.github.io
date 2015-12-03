@@ -129,6 +129,8 @@ a:active {
            }
        }
         
+       dataPoints.push({x:24, y:-0.12 * Math.pow(24-14, 2)+12});
+        
        var chart = new CanvasJS.Chart("chartContainer", {
            title: {
                text: "Flight Path"
@@ -163,6 +165,8 @@ a:active {
            dataPoints.push({x: x, y: y});
            }
        }
+        
+       dataPoints.push({x:22, y:-0.5 * Math.pow(22-16, 2)+18}); 
         
        
         
@@ -201,6 +205,8 @@ a:active {
            }
        }
         
+       dataPoints.push({x:24, y:-1 * Math.pow(24-18, 2)+36});
+       
        var chart = new CanvasJS.Chart("chartContainer", {
            title: {
                text: "Flight Path"
@@ -235,6 +241,8 @@ a:active {
            dataPoints.push({x: x, y: y});
            }
        }
+       
+      dataPoints.push({x:14.5, y:-0.99 * Math.pow(14.5-10, 2)+20});
         
        var chart = new CanvasJS.Chart("chartContainer", {
            title: {
@@ -291,7 +299,7 @@ function startGame() {
 <h3 id="axis"></h3>
 <h3 id="roots"></h3>
 <h3 id="height"></h3>
-<div id="chartContainer" style="height: 300px; width: 300px;"></div>
+<div id="chartContainer" style="height: 300px; width: 500px;"></div>
 </center>
 </body>
 
