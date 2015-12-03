@@ -117,7 +117,7 @@ a:active {
        $("#axis").html("x=14");
        $("#roots").html("Roots: 4 and 24");
        $("#height").html("Max Height: 12");
-       $("#myCanvas").quadraticPlot({coeff:{a:-0.12,b:3.36,c:-35.52}});
+       $("#myCanvas").quadraticPlot({coeff:{a:-0.12,b:3.36,c:-35.52}, drawGrid: true, writeEquation: true});
     }
     else if (color === "red") {
         $("#img").attr('src', "red.png");
@@ -127,7 +127,7 @@ a:active {
        $("#axis").html("x=16");
        $("#roots").html("Roots: 10 and 22");
        $("#height").html("Max Height: 18");
-       $("#myCanvas").quadraticPlot({coeff:{a:-0.5,b:16,c:-110}});
+       $("#myCanvas").quadraticPlot({coeff:{a:-0.5,b:16,c:-110}, drawGrid: true, writeEquation: true});
     }
     else if (color === "yellow") {
         $("#img").attr('src', "yellow.png");
@@ -137,7 +137,7 @@ a:active {
        $("#axis").html("x=12");
        $("#roots").html("Roots: 12 and 24");
        $("#height").html("Max Height: 36");
-       $("#myCanvas").quadraticPlot({coeff:{a:-1,b:36,c:-288}});
+       $("#myCanvas").quadraticPlot({coeff:{a:-1,b:36,c:-288}, drawGrid: true, writeEquation: true});
     }
     else if (color === "black") {
        $("#img").attr('src', "black.png"); 
@@ -147,7 +147,7 @@ a:active {
        $("#axis").html("x=10");
        $("#roots").html("Roots: 5.5 and 14.5");
        $("#height").html("Max Height: 20");
-       $("#myCanvas").quadraticPlot({coeff:{a:-0.99,b:19.8,c:-199}});
+       $("#myCanvas").quadraticPlot({coeff:{a:-0.99,b:19.8,c:-199}, drawGrid: true, writeEquation: true});
     }
     else {
         
