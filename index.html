@@ -271,6 +271,33 @@ var task2 = function() {
     $("#axis").html("");
     $("#roots").html("");
     $("#height").html("");
+    
+    dataPoints = [];
+       for (x = 0; x < 100; x++) {
+          var y = -0.12 * Math.pow(x-14, 2)+12;
+           if (y <= 0) {
+               
+           }
+           else {
+           dataPoints.push({x: x, y: y});
+           }
+       }
+        
+       dataPoints.push({x:24, y:-0.12 * Math.pow(24-14, 2)+12});
+        
+       var chart = new CanvasJS.Chart("chartContainer", {
+           title: {
+               text: "Flight Path"
+           },
+           data: [
+               {
+                   type: "scatter",
+                   dataPoints: dataPoints
+               }
+           ]
+       });
+        
+       chart.render();
 }
 
 var task3 = function() {
