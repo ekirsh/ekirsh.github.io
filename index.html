@@ -89,25 +89,25 @@ a:active {
  var showBird = function (color) {
     console.log("f");
     if (color === "blue") {
-       $("#img").src = "blue.png";
+       $("#img").attr('src', "blue.png");
        $("#img").fadeIn();
        setTimeout(2);
        $("#img").fadeOut();
     }
     else if (color === "red") {
-        $("#img").src = "red.png"
+        $("#img").attr('src', "red.png");
         $("#img").fadeIn();
         setTimeout(2);
         $("#img").fadeOut();
     }
     else if (color === "yellow") {
-        $("#img").src = "yellow.png" 
+        $("#img").attr('src', "yellow.png"); 
         $("#img").fadeIn();
         setTimeout(2);
         $("#img").fadeOut();
     }
     else if (color === "black") {
-        $("#img").src = "black.png" 
+        $("#img").attr('src', "black.png"); 
         $("#img").fadeIn();
         setTimeout(2);
         $("#img").fadeOut();
