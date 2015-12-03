@@ -112,7 +112,7 @@ a:active {
     if (color === "blue") {
        $("#img").attr('src', "blue.png");
        $("#img").fadeIn();
-       $("#equation").html("y = -0.12(x - 14)2 + 12");
+       $("#equation").html("y = -0.12(x - 14)<sup>2</sup> + 12");
        $("#distance").html("Distance: 20");
        $("#axis").html("x=14");
        $("#roots").html("Roots: 4 and 24");
@@ -149,7 +149,7 @@ a:active {
     else if (color === "red") {
         $("#img").attr('src', "red.png");
         $("#img").fadeIn();
-       $("#equation").html("y=-0.5(x - 16)2 + 18");
+       $("#equation").html("y=-0.5(x - 16)<sup>2</sup> + 18");
        $("#distance").html("Distance: 12");
        $("#axis").html("x=16");
        $("#roots").html("Roots: 10 and 22");
@@ -188,7 +188,7 @@ a:active {
     else if (color === "yellow") {
         $("#img").attr('src', "yellow.png");
         $("#img").fadeIn();
-       $("#equation").html("y=-(x-18)2+36");
+       $("#equation").html("y=-(x-18)<sup>2</sup>+36");
        $("#distance").html("Distance: 12");
        $("#axis").html("x=12");
        $("#roots").html("Roots: 12 and 24");
@@ -225,7 +225,7 @@ a:active {
     else if (color === "black") {
        $("#img").attr('src', "black.png"); 
         $("#img").fadeIn();
-       $("#equation").html("y=-0.99(x-10)2+20");
+       $("#equation").html("y=-0.99(x-10)<sup>2</sup>+20");
        $("#distance").html("Distance: 9");
        $("#axis").html("x=10");
        $("#roots").html("Roots: 5.5 and 14.5");
@@ -261,15 +261,28 @@ a:active {
     else {
         
     }
-}   
+}
+ 
+var task2 = function() {
+    $("#img").attr('src', "blue.png");
+    $("#img").fadeIn();
+    $("#equation").html("The blue bird has a root of 24, as does the yellow bird but the yellow bird traveled higher and assuming that the speed of the birds is the same, the yellow bird had to travel for longer to get to the point (24, 0), therefore the blue bird hit the pig.");
+    $("#distance").html("");
+    $("#axis").html("");
+    $("#roots").html("");
+    $("#height").html("");
+}
+
+var task3 = function() {
+    window.location.href = "3.html";
+}
   
 window.onload = function() {
     if (annyang) {
         var commands = {
             'show (me) (the) *color (bird)': showBird,
-            'hello': function() {
-                console.log("Hello");
-            }
+            'task two': task2,
+            'task three': task3
         };
         
         annyang.debug();
@@ -289,6 +302,7 @@ function startGame() {
 </script>
 </head>
 <body>
+<audio src="background.mp3" autoplay></audio>
 <h1 id="title">Angry Birds</h1>
 <h3 id="credits">by Christian and Ezra</h3>
 <a href="javascript:startGame()">Start</a>
