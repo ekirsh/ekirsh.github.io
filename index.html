@@ -84,24 +84,33 @@ a:active {
     top: 6px;
 }
 </style>
-</head>
-<body>
-<h1 id="title">Angry Birds</h1>
-<h3 id="credits">by Christian and Ezra</h3>
-<a href="javascript:startGame()">Start</a>
-<div id="chart"></div>
-</body>
 <script>
+ 
  var showBird = function (color) {
     console.log("f");
     if (color === "blue") {
-        alert("blue");
+       $("#img").src = "blue.png";
+       $("#img").fadeIn();
+       setTimeout(2);
+       $("#img").fadeOut();
     }
     else if (color === "red") {
-        alert("red");
+        $("#img").src = "red.png"
+        $("#img").fadeIn();
+        setTimeout(2);
+        $("#img").fadeOut();
     }
     else if (color === "yellow") {
-        alert("yellow");
+        $("#img").src = "yellow.png" 
+        $("#img").fadeIn();
+        setTimeout(2);
+        $("#img").fadeOut();
+    }
+    else if (color === "black") {
+        $("#img").src = "black.png" 
+        $("#img").fadeIn();
+        setTimeout(2);
+        $("#img").fadeOut();
     }
     else {
         alert("unknown");
@@ -119,6 +128,7 @@ window.onload = function() {
         
         annyang.debug();
         annyang.addCommands(commands);
+        annyang.start();
     }
     else {
         alert("Please use Google Chrome or another browser");
@@ -129,7 +139,14 @@ function startGame() {
     $("#title").fadeOut();
     $("#credits").fadeOut();
     $("a").fadeOut();
-    annyang.start();
 }
 </script>
+</head>
+<body>
+<h1 id="title">Angry Birds</h1>
+<h3 id="credits">by Christian and Ezra</h3>
+<a href="javascript:startGame()">Start</a>
+<img id="bird" src="">
+</body>
+
 </html>
