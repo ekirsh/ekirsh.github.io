@@ -87,7 +87,6 @@ a:active {
 <script>
  
  var showBird = function (color) {
-    console.log("f");
     if (color === "blue") {
        $("#img").attr('src', "blue.png");
        $("#img").fadeIn();
@@ -113,7 +112,7 @@ a:active {
         $("#img").fadeOut();
     }
     else {
-        alert("unknown");
+        
     }
 }   
   
@@ -146,7 +145,7 @@ function startGame() {
 <h1 id="title">Angry Birds</h1>
 <h3 id="credits">by Christian and Ezra</h3>
 <a href="javascript:startGame()">Start</a>
-<img id="bird" src="">
+<img id="img" src="">
 </body>
 
 </html>
