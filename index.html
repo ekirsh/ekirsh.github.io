@@ -1,347 +1,145 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-<script src="jquery-latest.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/annyang/2.0.0/annyang.min.js"></script>
-<script type="text/javascript" src="canvasjs.min.js"></script>
-<style>
-@font-face {
-   font-family: "Angry";
-   src: url(angrybirds-regular.ttf);
-}
-body {
-   background-image: url(background.jpg); 
-   background-size: 1280px 720px;
-}
-#img {
+	<head>
+		<title>Enigma by Ezra Kirsh</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    </head>
+	<body>
 
-}
-#title {
-    text-align: center;
-    font-family: "Angry";
-    color: white;
-     text-shadow: 0 1px 0 #ccc,
-               0 1px 0 #c9c9c9,
-               0 1.5px 0 #bbb,
-               0 2px 0 #b9b9b9,
-               0 2.5px 0 #aaa,
-               0 3px 0.5px rgba(0,0,0,.1),
-               0 0 2.5px rgba(0,0,0,.1),
-               0 0.5px 1.5px rgba(0,0,0,.3),
-               0 1.5px 2.5px rgba(0,0,0,.2),
-               0 2.5px 5px rgba(0,0,0,.25),
-               0 5px 5px rgba(0,0,0,.2),
-               0 10px 10px rgba(0,0,0,.15);
-    margin-top: 50px;
-    font-size: 50px;
-}
-h3 {
-    text-align: center;
-    font-family: "Angry";
-    color: white;
-    text-shadow: 0 1px 0 #ccc,
-               0 1px 0 #c9c9c9,
-               0 1.5px 0 #bbb,
-               0 2px 0 #b9b9b9,
-               0 2.5px 0 #aaa,
-               0 3px 0.5px rgba(0,0,0,.1),
-               0 0 2.5px rgba(0,0,0,.1),
-               0 0.5px 1.5px rgba(0,0,0,.3),
-               0 1.5px 2.5px rgba(0,0,0,.2),
-               0 2.5px 5px rgba(0,0,0,.25),
-               0 5px 5px rgba(0,0,0,.2),
-               0 10px 10px rgba(0,0,0,.15);
-    font-size: 30px;
-}
-#credits {
-    text-align: center;
-    font-family: "Angry";
-    color: white;
-    text-shadow: 0 1px 0 #ccc,
-               0 1px 0 #c9c9c9,
-               0 1.5px 0 #bbb,
-               0 2px 0 #b9b9b9,
-               0 2.5px 0 #aaa,
-               0 3px 0.5px rgba(0,0,0,.1),
-               0 0 2.5px rgba(0,0,0,.1),
-               0 0.5px 1.5px rgba(0,0,0,.3),
-               0 1.5px 2.5px rgba(0,0,0,.2),
-               0 2.5px 5px rgba(0,0,0,.25),
-               0 5px 5px rgba(0,0,0,.2),
-               0 10px 10px rgba(0,0,0,.15);
-    font-size: 30px;
-    margin-top: -20px;
-}
-a {
-	position: relative;
-    color: rgba(255,255,255,1);
-    text-decoration: none;
-    background-color: rgba(219,87,5,1);
-    font-family: 'Angry';
-    font-weight: 700;
-    font-size: 3em;
-    display: block;
-    padding: 4px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
-    -webkit-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
-    -moz-box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
-    box-shadow: 0px 9px 0px rgba(219,31,5,1), 0px 9px 25px rgba(0,0,0,.7);
-    margin: 100px auto;
-	width: 160px;
-	text-align: center;
-	
-	-webkit-transition: all .1s ease;
-	-moz-transition: all .1s ease;
-	-ms-transition: all .1s ease;
-	-o-transition: all .1s ease;
-	transition: all .1s ease;
-}
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Intro</a></li>
+							<li><a href="#one">Affects</a></li>
+							<li><a href="#two">What is Enigma?</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 
-a:active {
-    -webkit-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-    -moz-box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-    box-shadow: 0px 3px 0px rgba(219,31,5,1), 0px 3px 6px rgba(0,0,0,.9);
-    position: relative;
-    top: 6px;
-}
-</style>
-<script>
- 
- var showBird = function (color) {
-    if (color === "blue") {
-       $("#img").attr('src', "blue.png");
-       $("#img").fadeIn();
-       $("#equation").html("y = -0.12(x - 14)<sup>2</sup> + 12");
-       $("#distance").html("Distance: 20");
-       $("#axis").html("x=14");
-       $("#roots").html("Roots: 4 and 24");
-       $("#height").html("Max Height: 12");
-        
-        dataPoints = [];
-       for (x = 0; x < 100; x++) {
-          var y = -0.12 * Math.pow(x-14, 2)+12;
-           if (y <= 0) {
-               
-           }
-           else {
-           dataPoints.push({x: x, y: y});
-           }
-       }
-        
-       dataPoints.push({x:24, y:-0.12 * Math.pow(24-14, 2)+12});
-        
-       var chart = new CanvasJS.Chart("chartContainer", {
-           title: {
-               text: "Flight Path"
-           },
-           data: [
-               {
-                   type: "scatter",
-                   dataPoints: dataPoints
-               }
-           ]
-       });
-        
-       chart.render();
-       
-    }
-    else if (color === "red") {
-        $("#img").attr('src', "red.png");
-        $("#img").fadeIn();
-       $("#equation").html("y=-0.5(x - 16)<sup>2</sup> + 18");
-       $("#distance").html("Distance: 12");
-       $("#axis").html("x=16");
-       $("#roots").html("Roots: 10 and 22");
-       $("#height").html("Max Height: 18");
-        
-         dataPoints = [];
-       for (x = 0; x < 100; x++) {
-           var y=-0.5 * Math.pow(x-16, 2)+18;
-           if (y <= 0) {
-               
-           }
-           else {
-           dataPoints.push({x: x, y: y});
-           }
-       }
-        
-       dataPoints.push({x:22, y:-0.5 * Math.pow(22-16, 2)+18}); 
-        
-       
-        
-       var chart = new CanvasJS.Chart("chartContainer", {
-           title: {
-               text: "Flight Path"
-           },
-           data: [
-               {
-                   type: "scatter",
-                   dataPoints: dataPoints
-               }
-           ]
-       });
-        
-       chart.render();
-       
-    }
-    else if (color === "yellow") {
-        $("#img").attr('src', "yellow.png");
-        $("#img").fadeIn();
-       $("#equation").html("y=-(x-18)<sup>2</sup>+36");
-       $("#distance").html("Distance: 12");
-       $("#axis").html("x=12");
-       $("#roots").html("Roots: 12 and 24");
-       $("#height").html("Max Height: 36");
-        
-       dataPoints = [];
-       for (x = 0; x < 100; x++) {
-           var y=-1 * Math.pow(x-18, 2)+36;
-           if (y <= 0) {
-               
-           }
-           else {
-           dataPoints.push({x: x, y: y});
-           }
-       }
-        
-       dataPoints.push({x:24, y:-1 * Math.pow(24-18, 2)+36});
-       
-       var chart = new CanvasJS.Chart("chartContainer", {
-           title: {
-               text: "Flight Path"
-           },
-           data: [
-               {
-                   type: "scatter",
-                   dataPoints: dataPoints
-               }
-           ]
-       });
-        
-       chart.render();
-       
-    }
-    else if (color === "black") {
-       $("#img").attr('src', "black.png"); 
-        $("#img").fadeIn();
-       $("#equation").html("y=-0.99(x-10)<sup>2</sup>+20");
-       $("#distance").html("Distance: 9");
-       $("#axis").html("x=10");
-       $("#roots").html("Roots: 5.5 and 14.5");
-       $("#height").html("Max Height: 20");
-       
-       dataPoints = [];
-       for (x = 0; x < 100; x++) {
-           var y=-0.99 * Math.pow(x-10, 2)+20;
-           if (y <= 0) {
-               
-           }
-           else {
-           dataPoints.push({x: x, y: y});
-           }
-       }
-       
-      dataPoints.push({x:14.5, y:-0.99 * Math.pow(14.5-10, 2)+20});
-        
-       var chart = new CanvasJS.Chart("chartContainer", {
-           title: {
-               text: "Flight Path"
-           },
-           data: [
-               {
-                   type: "scatter",
-                   dataPoints: dataPoints
-               }
-           ]
-       });
-        
-       chart.render();
-    }
-    else {
-        
-    }
-}
- 
-var task2 = function() {
-    $("#img").attr('src', "pig.png");
-    $("#img").fadeIn();
-    $("#equation").html("The blue bird has a root of 24, as does the yellow bird but the yellow bird traveled higher and assuming that the speed of the birds is the same, the yellow bird had to travel for longer to get to the point (24, 0), therefore the blue bird hit the pig.");
-    $("#distance").html("");
-    $("#axis").html("");
-    $("#roots").html("");
-    $("#height").html("");
-    
-    dataPoints = [];
-       for (x = 0; x < 100; x++) {
-          var y = -0.12 * Math.pow(x-14, 2)+12;
-           if (y <= 0) {
-               
-           }
-           else {
-           dataPoints.push({x: x, y: y});
-           }
-       }
-        
-       dataPoints.push({x:24, y:-0.12 * Math.pow(24-14, 2)+12});
-        
-       var chart = new CanvasJS.Chart("chartContainer", {
-           title: {
-               text: "Flight Path"
-           },
-           data: [
-               {
-                   type: "scatter",
-                   dataPoints: dataPoints
-               }
-           ]
-       });
-        
-       chart.render();
-}
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-var task3 = function() {
-    window.location.href = "3.html";
-}
-  
-window.onload = function() {
-    if (annyang) {
-        var commands = {
-            'show (me) (the) *color (bird)': showBird,
-            'task two': task2,
-            'task three': task3
-        };
-        
-        annyang.debug();
-        annyang.addCommands(commands);
-        annyang.start();
-    }
-    else {
-        alert("Please use Google Chrome or another browser");
-    }
-}
- 
-function startGame() {
-    $("#title").fadeOut();
-    $("#credits").fadeOut();
-    $("a").fadeOut();
-}
-</script>
-</head>
-<body>
-<audio src="background.mp3" autoplay></audio>
-<h1 id="title">Angry Birds</h1>
-<h3 id="credits">by Christian and Ezra</h3>
-<a href="javascript:startGame()">Start</a>
-<center>
-<img id="img" width="250" height="250" src="" style="display:none; align:middle;">
-<h3 id="equation"></h3>
-<h3 id="distance"></h3>
-<h3 id="axis"></h3>
-<h3 id="roots"></h3>
-<h3 id="height"></h3>
-<div id="chartContainer" style="height: 300px; width: 500px;"></div>
-</center>
-</body>
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1 class="title">Enigma</h1>
+                            <h3>The German Encryption Machine</h3>
+							<p>A huge breakthrough for the allies in World War 2 was the cracking of Enigma, the German’s encryption machine, which was instrumental to the allied forces claiming victory in World War Two.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Learn more</a></li>
+							</ul>
+						</div>
+					</section>
 
+				<!-- One -->
+					<section id="one" class="wrapper style2 spotlights">
+						<section>
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Battle of the Atlantic</h2>
+									<p>One of the major affects that the breaking of Enigma had was the Battle of the North Atlantic. For a long time, German U-Boats had been attacking supplies being brought to Britain during the war. Churchill's advisors were very worried that Britain would starve.</p>
+                                    <b>"The only thing that ever really frightened me during the war was the U-boat peril"</b><p> Winston Churchill</p>
+                                    <p>After breaking Enigma, the allies had access to thousands of Enigma messages. Although many of them were useless, some contained coordinates and attack plans. The allies could now stay away from incomg U-Boats.</p>
+									
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>Operation Mincemeat</h2>
+									<p>On a dead body that they had built a rich backstory for, the allies planted <b>fake</b> top secret documents. They then deliberately left the body on the coast of Spain, hoping it would find its way to Germany. The documents contained plans to invade Greece, while the allies real target was Sicily.</p>
+                                    <p>To monitor if the Germans were believing their ruse, the allies used Enigma transmissions to determine whether they could attack Sicily with minimal resistance. Without these Enigma transmissions, the allies could have been unprepared for what they would face at Sicily.</p>
+									
+								</div>
+							</div>
+						</section>
+						<section>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
+							<div class="content">
+								<div class="inner">
+									<h2>The Invasion of Europe</h2>
+									<p>The invasion of Europe started with D-Day, which was only made possible by resolving the <a href="#one">U-Boat crisis in the North Atlantic</a>. The ability to read Enigma messages was also just a generally useful ability for the allies to have. While the fighting was happening in Europe, about 7 million peopme were dying everday. Many estimate that the breaking of Enigma shortened the war by 3 years, therefore saving 21 million lives.</p>
+								</div>
+							</div>
+						</section>
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style3 fade-up">
+						<div class="inner">
+							<h2>What is Enigma?</h2>
+							<p class="css-typing">The enigma was a enciphering machine invented by a German engineer named Arthur Scherbius. It was eventually purchased by the German army/navy and used for the majority of their World War 2 operations. Although, they made many of their own advancments. </p>
+                            <h3>How it works</h3>
+							<div class="features">
+								<section>
+									<span class="icon major fa-bold"></span>
+									<h3>Original Letter</h3>
+									<p>The sender would type in the letter they wanted to send into the Enigma machine. It will then go through the rest of the processes.</p>
+								</section>
+								<section>
+									<span class="icon major fa-plug"></span>
+									<h3>Plugboard</h3>
+									<p>The signal would pass through something called a plugboard, which allows the user to define a constant set of rules.</p>
+                                    <p>Ex. "U" will always convert to "C"</p>
+								</section>
+								<section>
+									<span class="icon major fa-cog"></span>
+									<h3>Rotors</h3>
+									<p>Three rotors, whose settings are constantly changed, change the letter to a new letter. To make it more complex, the first rotor rotates one step after each press. After 26 presses, the second one begins to change.</p>
+								</section>
+								<section>
+									<span class="icon major fa-retweet"></span>
+									<h3>Reflector</h3>
+									<p>The signal passes through a reflector, which then sends the letter back through through the rotors and the plugboard all over again. This make the resulting encryption even more complex.</p>
+								</section>
+								<section>
+									<span class="icon major fa-user-secret"></span>
+									<h3>Encrypted Letter</h3>
+									<p>After the encryption is done, a new letter lights up on the Enigma that can then be sent using Morse Code to another Enigma user.</p>
+								</section>
+								<section>
+									<span class="icon major fa-font"></span>
+									<h3>Received</h3>
+									<p>The soldiers on the receiving end uses the Enigma to reverse this process and decrypt this Enigma code. This whole system relies on both machines being on the same settings.</p>
+								</section>
+							</div>
+						</div>
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Ezra Kirsh. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li><li>Sources: <a href="index.html">Various</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
